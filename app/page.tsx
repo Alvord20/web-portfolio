@@ -28,7 +28,25 @@ import TiltedCard from "./components/TiltedCard/TiltedCard";
 import CurvedLoop from "./components/CurvedLoop/CurvedLoop";
 // import Folder from "./components/Folder/Folder";
 import { AnimatedTooltip } from "./components/ui/animated-tooltip";
+import MobilePopup from "./components/MobilePopup";
 
+function Page() {
+  return (
+    <div className="relative">
+      <main className="min-h-screen flex flex-col items-center justify-center">
+        <h1 className="text-3xl font-bold text-center">
+          Selamat datang di portfolio saya!
+        </h1>
+        <p className="text-gray-500 mt-2 text-center">
+          Eksplorasi lebih nyaman di PC 💻
+        </p>
+      </main>
+
+      {/* Popup untuk mobile */}
+      <MobilePopup />
+    </div>
+  );
+}
 const people = [
   {
     id: 1,
@@ -254,9 +272,11 @@ export default function Home() {
       ),
     },
   ];
+
   // SECTION 1 //
   return (
     <div className="min-h-screen overflow-hidden bg-[#222831]">
+      <MobilePopup />
       <div className="absolute top-0 right-0 left-0 bottom-0 w-full h-full pointer-events-none">
         <Particles
           particleColors={["#black", "#00ADB5"]}
@@ -437,7 +457,7 @@ export default function Home() {
             <button
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1hee5NeOd2A_KRUzDASlCmE6DNSURy74g/view?usp=drive_link",
+                  "https://drive.google.com/file/d/1hee5NeOd2A_KRUzDASlCmE6DNSURy74g/view?usp=sharing",
                   "_blank"
                 )
               }
@@ -516,7 +536,7 @@ export default function Home() {
                   as="button"
                   onClick={() =>
                     window.open(
-                      "https://drive.google.com/file/d/1gJNp_e4c9RHgp9H3j6ktWpgNQ8OrVk6v/view?usp=drive_link",
+                      "https://drive.google.com/file/d/1gJNp_e4c9RHgp9H3j6ktWpgNQ8OrVk6v/view?usp=sharing",
                       "_blank"
                     )
                   }
