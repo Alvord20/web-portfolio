@@ -356,7 +356,7 @@ export default function Home() {
                 />
                 <div className="flex items-center">
                   <a
-                    href="https://drive.google.com/file/d/1JfoqLdlVcYsmRoi9SuXy44lVuUbwweVL/view?usp=drive_link"
+                    href="https://drive.google.com/file/d/1JfoqLdlVcYsmRoi9SuXy44lVuUbwweVL/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -593,7 +593,7 @@ export default function Home() {
         </div>
         <div className="flex items-center justify-center gap-8">
           <a
-            href="https://drive.google.com/file/d/1LJyuDNOGXQrBceNzbN3k-r1M6VBC304n/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1LJyuDNOGXQrBceNzbN3k-r1M6VBC304n/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
