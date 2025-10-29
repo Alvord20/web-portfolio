@@ -65,14 +65,14 @@ const people = [
   },
 ];
 
-export function AnimatedTooltipPreview() {
+function AnimatedTooltipPreview() {
   return (
     <div className="flex flex-row items-center justify-center mb-10 w-full">
       <AnimatedTooltip items={people} />
     </div>
   );
 }
-export function ThreeDCardDemo() {
+function ThreeDCardDemo() {
   return (
     <CardContainer className="inter-var">
       <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
@@ -120,7 +120,7 @@ export function ThreeDCardDemo() {
     </CardContainer>
   );
 }
-export function HoverBorderGradientDemo() {
+function HoverBorderGradientDemo() {
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center">
       <HoverBorderGradient>
