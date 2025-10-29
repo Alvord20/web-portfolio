@@ -621,7 +621,7 @@ export default function Home() {
             />
           </a>
           <a
-            href="public/images/experience/1.jpg"
+            href="/images/experience/1.jpg"
             target="_blank"
             rel="noopener noreferrer"
           >
