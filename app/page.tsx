@@ -29,7 +29,75 @@ import CurvedLoop from "./components/CurvedLoop/CurvedLoop";
 // import Folder from "./components/Folder/Folder";
 import { AnimatedTooltip } from "./components/ui/animated-tooltip";
 import MobilePopup from "./components/MobilePopup";
+import LogoLoop from "./components/LogoLoop/LogoLoop";
+import {
+  SiAutocad,
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+} from "react-icons/si";
 
+const techLogos = [
+  {
+    node: <SiAutocad color="#E61755" />,
+    title: "React",
+    href: "https://react.dev",
+  },
+  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+  {
+    node: <SiTypescript />,
+    title: "TypeScript",
+    href: "https://www.typescriptlang.org",
+  },
+  {
+    node: <SiTailwindcss />,
+    title: "Tailwind CSS",
+    href: "https://tailwindcss.com",
+  },
+];
+
+// Alternative with image sources
+const imageLogos = [
+  {
+    src: "/images/experience/AutoCad_new_logo.svg",
+    alt: "AutoCAD",
+  },
+  {
+    src: "/images/experience/SAP_logo-removebg-preview.png",
+    alt: "SAP2000",
+  },
+  {
+    src: "https://tecnologia.uniandes.edu.co/wp-content/uploads/etabs-logo.png",
+    alt: "ETABS",
+  },
+  {
+    src: "https://static.cdnlogo.com/logos/m/39/microsoft-office-2013.svg",
+    alt: "Office",
+  },
+  {
+    src: "https://static.cdnlogo.com/logos/s/89/sketchup-2020.svg",
+    alt: "SketchUp",
+  },
+];
+
+function App() {
+  return (
+    <div style={{ height: "200px", position: "relative", overflow: "hidden" }}>
+      <LogoLoop
+        logos={techLogos}
+        speed={120}
+        direction="left"
+        logoHeight={48}
+        gap={40}
+        pauseOnHover
+        scaleOnHover
+        fadeOut
+        fadeOutColor="#ffffff"
+        ariaLabel="Technology partners"
+      />
+    </div>
+  );
+}
 function Page() {
   return (
     <div className="relative">
@@ -44,49 +112,6 @@ function Page() {
 
       {/* Popup untuk mobile */}
       <MobilePopup />
-    </div>
-  );
-}
-const people = [
-  {
-    id: 1,
-    name: "AutoCAD",
-    designation: "",
-    image:
-      "https://images.seeklogo.com/logo-png/48/1/autocad-logo-png_seeklogo-482394.png",
-  },
-  {
-    id: 2,
-    name: "SAP2000",
-    designation: "",
-    image: "/images/experience/sap2000.png",
-  },
-  {
-    id: 3,
-    name: "ETABS",
-    designation: "",
-    image: "https://hlc.so/wp-content/uploads/2023/10/etabs.png",
-  },
-  {
-    id: 4,
-    name: "Microsoft Office",
-    designation: "",
-    image:
-      "https://cdn.jim-nielsen.com/ios/1024/microsoft-office-2020-02-26.png?rf=1024",
-  },
-  {
-    id: 5,
-    name: "SketchUp",
-    designation: "",
-    image:
-      "https://cdn.brandfetch.io/id6JY24Jff/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1667581865394",
-  },
-];
-
-function AnimatedTooltipPreview() {
-  return (
-    <div className="flex flex-row items-center justify-center mb-10 w-full">
-      <AnimatedTooltip items={people} />
     </div>
   );
 }
@@ -632,7 +657,7 @@ export default function Home() {
               displayOverlayContent={true}
               overlayContent={
                 <p
-                  className="text-white font-bold translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-sm 
+                  className="text-white translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-sm 
                  shadow-sm"
                 >
                   SK Manajer Lapangan Pelaksanaan Pekerjaan Gedung
@@ -660,7 +685,7 @@ export default function Home() {
               displayOverlayContent={true}
               overlayContent={
                 <p
-                  className="text-white font-bold translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-sm 
+                  className="text-white translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-sm 
                  shadow-sm"
                 >
                   Praktik Kerja Lapangan (PKL)
@@ -673,12 +698,26 @@ export default function Home() {
           <CurvedLoop
             marqueeText="Skill"
             speed={1}
-            curveAmount={100}
+            curveAmount={300}
             interactive={false}
           />
         </div>
-        <div className="flex flex-row items-center justify-center w-full">
-          <AnimatedTooltip items={people} />
+        <div
+          style={{ height: "200px", position: "relative", overflow: "hidden" }}
+        >
+          <LogoLoop
+            logos={imageLogos}
+            speed={120}
+            direction="left"
+            logoHeight={48}
+            gap={40}
+            pauseOnHover
+            scaleOnHover
+            fadeOut
+            fadeOutColor="#000"
+            ariaLabel="Technology partners"
+            className="child-img:h-12 child-img:w-auto child-img:object-contain"
+          />
         </div>
       </section>
     </div>
