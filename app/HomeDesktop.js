@@ -1,3 +1,5 @@
+// /app/HomeDesktop.js
+
 "use client";
 
 import Image from "next/image";
@@ -36,30 +38,7 @@ import {
   SiTypescript,
   SiTailwindcss,
 } from "react-icons/si";
-import useIsMobile from "./hooks/useIsMobile";
-import HomeDesktop from "./HomeDesktop";
-import HomeMobile from "./HomeMobile";
 
-const techLogos = [
-  {
-    node: <SiAutocad color="#E61755" />,
-    title: "React",
-    href: "https://react.dev",
-  },
-  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
-  {
-    node: <SiTypescript />,
-    title: "TypeScript",
-    href: "https://www.typescriptlang.org",
-  },
-  {
-    node: <SiTailwindcss />,
-    title: "Tailwind CSS",
-    href: "https://tailwindcss.com",
-  },
-];
-
-// Alternative with image sources
 const imageLogos = [
   {
     src: "/images/experience/AutoCad_new_logo.svg",
@@ -83,153 +62,13 @@ const imageLogos = [
   },
 ];
 
-function App() {
-  return (
-    <div style={{ height: "200px", position: "relative", overflow: "hidden" }}>
-      <LogoLoop
-        logos={techLogos}
-        speed={120}
-        direction="left"
-        logoHeight={48}
-        gap={40}
-        pauseOnHover
-        scaleOnHover
-        fadeOut
-        fadeOutColor="#ffffff"
-        ariaLabel="Technology partners"
-      />
-    </div>
-  );
-}
-function Page() {
-  return (
-    <div className="relative">
-      <main className="min-h-screen flex flex-col items-center justify-center">
-        <h1 className="text-3xl font-bold text-center">
-          Selamat datang di portfolio saya!
-        </h1>
-        <p className="text-gray-500 mt-2 text-center">
-          Eksplorasi lebih nyaman di PC 💻
-        </p>
-      </main>
-
-      {/* Popup untuk mobile */}
-      <MobilePopup />
-    </div>
-  );
-}
-function ThreeDCardDemo() {
-  return (
-    <CardContainer className="inter-var">
-      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-        <CardItem
-          translateZ="50"
-          className="text-xl font-bold text-neutral-600 dark:text-white"
-        >
-          Make things float in air
-        </CardItem>
-        <CardItem
-          as="p"
-          translateZ="60"
-          className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-        >
-          Hover over this card to unleash the power of CSS perspective
-        </CardItem>
-        <CardItem translateZ="100" className="w-full mt-4">
-          <img
-            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            height="1000"
-            width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-            alt="thumbnail"
-          />
-        </CardItem>
-        <div className="flex justify-between items-center mt-20">
-          <CardItem
-            translateZ={20}
-            as="a"
-            href="https://twitter.com/mannupaaji"
-            target="__blank"
-            className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-          >
-            Try now →
-          </CardItem>
-          <CardItem
-            translateZ={20}
-            as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-          >
-            Sign up
-          </CardItem>
-        </div>
-      </CardBody>
-    </CardContainer>
-  );
-}
-function HoverBorderGradientDemo() {
-  return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-      <HoverBorderGradient>
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 66 65"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-4 w-4 mr-2"
-        >
-          <path
-            d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-            stroke="currentColor"
-            strokeWidth="8"
-            strokeLinecap="round"
-          />
-        </svg>
-        DOWNLOAD CV
-      </HoverBorderGradient>
-    </div>
-  );
-}
-
-const AceternityLogo = () => {
-  return (
-    <svg
-      width="66"
-      height="65"
-      viewBox="0 0 66 65"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-3 w-3 text-black dark:text-white"
-    >
-      <path
-        d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-        stroke="currentColor"
-        strokeWidth="15"
-        strokeMiterlimit="3.86874"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-};
-
-export default function Home() {
-  const isMobile = useIsMobile();
-
-  // Tampilkan pesan loading jika lebar layar belum terdeteksi (SSR/Initial load)
-  if (isMobile === null) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-[#222831] text-white text-lg">
-        Loading Portfolio...
-      </div>
-    );
-  }
-
-  // Conditional Rendering
-  return <>{isMobile ? <HomeMobile /> : <HomeDesktop />}</>;
-  // SECTION 1 //
+export default function HomeDesktop() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#222831]">
-      <MobilePopup />
+      {/* Di Desktop, MobilePopup dihilangkan atau tidak perlu di-render */}
+      {/* <MobilePopup /> */}
+
+      {/* Particles (Desktop Only) */}
       <div className="absolute top-0 right-0 left-0 bottom-0 w-full h-full pointer-events-none">
         <Particles
           particleColors={["#black", "#00ADB5"]}
@@ -243,11 +82,14 @@ export default function Home() {
         />
       </div>
       <div className="container mx-auto min-h-screen px-3">
+        {/* Layout 2 Kolom untuk Desktop */}
         <div className="grid grid-cols-12">
+          {/* Kolom Kiri: Lanyard (Desktop Only) */}
           <div className="col-span-6">
             <Lanyard position={[-5, -3, 12]} gravity={[0, -40, 0]} />
           </div>
 
+          {/* Kolom Kanan: Teks */}
           <div className="col-span-6 ">
             <div className="flex items-center h-full">
               <div className="flex flex-col gap-6">
@@ -348,7 +190,8 @@ export default function Home() {
         </div>
       </div>
       <div className="h-20 bg-gradient-to-b from-[#222831] to-[black]"></div>
-      {/*  section 2 */}
+
+      {/* section 2 - Experience & Project */}
       <section className="min-h-screen bg-[black] py-20 px-5">
         <div className="font-bold text-[white] text-center">
           <ScrollFloat
@@ -361,8 +204,12 @@ export default function Home() {
             Experience & Project
           </ScrollFloat>
         </div>
+
+        {/* Card Layout (Desktop: 3 Card per baris jika cukup) */}
         <div className="flex justify-center gap-6 flex-wrap">
+          {/* Kartu 1 */}
           <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-[#222831] dark:bg-zinc-900 h-full">
+            {/* ... konten kartu 1 ... */}
             <img
               src={`/images/experience/3D KLINIK.jpg`}
               alt="3D Klinik"
@@ -385,8 +232,9 @@ export default function Home() {
             </ul>
           </BackgroundGradient>
 
-          {/* kedua di kanan */}
+          {/* Kartu 2 */}
           <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-[#31363F] dark:bg-zinc-900 h-full">
+            {/* ... konten kartu 2 ... */}
             <img
               src={`/images/experience/Kosan.jpg`}
               alt="kosan"
@@ -423,8 +271,9 @@ export default function Home() {
             </button>
           </BackgroundGradient>
 
-          {/* Ketiga di kanan */}
+          {/* Kartu 3 */}
           <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-[#31363F] dark:bg-zinc-900 h-full">
+            {/* ... konten kartu 3 ... */}
             <img
               src={`/images/experience/PKL.jpg`}
               alt="PKL"
@@ -447,10 +296,13 @@ export default function Home() {
             </ul>
           </BackgroundGradient>
         </div>
+
+        {/* Card 3D Project */}
         <div className="flex wrap justify-center gap-10">
           {/* Card 1 */}
           <CardContainer className="inter-var">
-            <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+            {/* ... konten Card 1 ... */}
+            <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -500,12 +352,14 @@ export default function Home() {
               </div>
             </CardBody>
           </CardContainer>
+
           {/* Card 2 */}
           <CardContainer className="inter-var">
+            {/* ... konten Card 2 ... */}
             <CardBody
               className="bg-gray-50 relative group/card dark:hover:shadow-2xl 
-             dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] 
-             border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border"
+              dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] 
+              border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border"
             >
               <CardItem
                 translateZ="50"
@@ -553,6 +407,8 @@ export default function Home() {
             </CardBody>
           </CardContainer>
         </div>
+
+        {/* Certificate */}
         <div className="font-bold text-[white] text-center">
           <ScrollFloat
             animationDuration={2}
@@ -564,6 +420,8 @@ export default function Home() {
             Certificate
           </ScrollFloat>
         </div>
+
+        {/* Certificate Cards */}
         <div className="flex items-center justify-center gap-8">
           <a
             href="https://drive.google.com/file/d/1LJyuDNOGXQrBceNzbN3k-r1M6VBC304n/view?usp=sharing"
@@ -584,10 +442,7 @@ export default function Home() {
               showTooltip={true}
               displayOverlayContent={true}
               overlayContent={
-                <p
-                  className="text-white translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-sm 
-                 shadow-sm"
-                >
+                <p className="text-white translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-sm shadow-sm">
                   SK Manajer Lapangan Pelaksanaan Pekerjaan Gedung
                 </p>
               }
@@ -612,16 +467,15 @@ export default function Home() {
               showTooltip={true}
               displayOverlayContent={true}
               overlayContent={
-                <p
-                  className="text-white translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-sm 
-                 shadow-sm"
-                >
+                <p className="text-white translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-sm shadow-sm">
                   Praktik Kerja Lapangan (PKL)
                 </p>
               }
             />
           </a>
         </div>
+
+        {/* Skill Loop */}
         <div>
           <CurvedLoop
             marqueeText="Skill"
@@ -630,6 +484,8 @@ export default function Home() {
             interactive={false}
           />
         </div>
+
+        {/* Logo Loop */}
         <div
           style={{ height: "200px", position: "relative", overflow: "hidden" }}
         >
