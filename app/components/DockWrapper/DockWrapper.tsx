@@ -32,7 +32,8 @@ export default function DockWrapper() {
     {
       icon: <FaLinkedin size={18} color="black" />,
       label: "Linkedin",
-      onClick: () => window.open("https://www.linkedin.com", "_blank"),
+      onClick: () =>
+        window.open("https://www.linkedin.com/in/ahmad-vito/", "_blank"),
     },
     {
       icon: <FaDiscord size={18} color="black" />,
