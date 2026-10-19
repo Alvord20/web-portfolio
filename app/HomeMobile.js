@@ -16,6 +16,7 @@ import LogoLoop from "./components/LogoLoop/LogoLoop";
 import Lanyard from "./components/Lanyard/Lanyard";
 import MobilePopup from "./components/MobilePopup"; // Pertahankan jika Anda ingin popup untuk mobile, tapi biasanya dihilangkan.
 import SocialIconsMobile from "./components/SocialIconsMobile";
+import DockWrapper from "./components/DockWrapper/DockWrapper";
 
 const imageLogos = [
   {
@@ -131,7 +132,7 @@ export default function HomeMobile() {
                 />
                 <div className=" flex flex-col items-center justify-center gap-4">
                   <a
-                    href="https://drive.google.com/file/d/1JfoqLdlVcYsmRoi9SuXy44lVuUbwweVL/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1pGq3NPkOoyRTLe_8peF4g3OIS01-rygQ/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -217,7 +218,7 @@ export default function HomeMobile() {
               onClick={() =>
                 window.open(
                   "https://drive.google.com/file/d/1hee5NeOd2A_KRUzDASlCmE6DNSURy74g/view?usp=sharing",
-                  "_blank"
+                  "_blank",
                 )
               }
               className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800"
@@ -278,15 +279,14 @@ export default function HomeMobile() {
                 className="text-neutral-500 text-xs max-w-sm mt-2 dark:text-neutral-300"
               >
                 {" "}
-                {/* Teks lebih kecil: text-xs */}
                 Membuat 3D menggunakan blender pada tahun 2023
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-4">
                 <img
                   src="/images/experience/P1.png"
-                  height="400" // Mengurangi height/width untuk mobile
+                  height="400"
                   width="400"
-                  className="h-48 w-full object-cover rounded-xl group-hover/card:shadow-xl" // Mengurangi tinggi gambar
+                  className="h-48 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                   alt="thumbnail"
                 />
               </CardItem>
@@ -296,13 +296,12 @@ export default function HomeMobile() {
                 <CardItem
                   translateZ={20}
                   as="a"
-                  href="https://www.instagram.com/vito_qq/"
-                  target="__blank"
+                  href="https://www.instagram.com/alvord_ehe/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-3 py-1 rounded-xl text-xs font-normal dark:text-white"
                 >
-                  {" "}
-                  {/* Teks/Padding lebih kecil */}
-                  @Vito_qq
+                  @alvord_ehe
                 </CardItem>
                 <CardItem
                   translateZ={20}
@@ -311,7 +310,7 @@ export default function HomeMobile() {
                   onClick={() =>
                     window.open(
                       "https://drive.google.com/file/d/1gJNp_e4c9RHgp9H3j6ktWpgNQ8OrVk6v/view?usp=sharing",
-                      "_blank"
+                      "_blank",
                     )
                   }
                   className="px-3 py-1 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
@@ -360,11 +359,11 @@ export default function HomeMobile() {
                 <CardItem
                   translateZ={20}
                   as="a"
-                  href="https://www.instagram.com/vito_qq/"
+                  href="https://www.instagram.com/alvord_ehe/"
                   target="_blank"
                   className="px-3 py-1 rounded-xl text-xs font-normal dark:text-white"
                 >
-                  @Vito_qq
+                  @alvord_ehe
                 </CardItem>
                 <CardItem
                   translateZ={20}
@@ -392,8 +391,8 @@ export default function HomeMobile() {
             Certificate
           </ScrollFloat>
         </div>
-        {/* Certificate Cards (Flex-col untuk 1 kolom di HP) */}
-        <div className="flex flex-col items-center justify-center gap-6">
+        <div className="flex items-center justify-center gap-8 flex-wrap">
+          {/* Card 1: SK Manajer Lapangan (Jenjang 6) */}
           <a
             href="https://drive.google.com/file/d/1LJyuDNOGXQrBceNzbN3k-r1M6VBC304n/view?usp=sharing"
             target="_blank"
@@ -403,22 +402,51 @@ export default function HomeMobile() {
               imageSrc="/images/experience/skk j6.png"
               altText="SK Jenjang 6"
               captionText="SK Jenjang 6"
-              containerHeight="250px" // Ukuran lebih kecil di mobile
-              containerWidth="250px"
-              imageHeight="250px"
-              imageWidth="250px"
-              rotateAmplitude={8} // Rotasi lebih kecil
-              scaleOnHover={1.1}
+              containerHeight="300px"
+              containerWidth="300px"
+              imageHeight="300px"
+              imageWidth="300px"
+              rotateAmplitude={12}
+              scaleOnHover={1.2}
               showMobileWarning={false}
-              showTooltip={false}
+              showTooltip={true}
               displayOverlayContent={true}
               overlayContent={
-                <p className="text-white translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-xs shadow-sm">
-                  SK Manajer Lapangan
+                <p className="text-white translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-sm px-3 py-1 shadow-sm">
+                  SK Manajer Lapangan Pelaksanaan Pekerjaan Gedung
                 </p>
               }
             />
           </a>
+
+          {/* Card 2: SK Ahli Muda K3 Konstruksi (Jenjang 7) */}
+          <a
+            href="https://drive.google.com/file/d/17C5nDfsZcz0VLWbkm85QdliiNGl87-YM/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TiltedCard
+              imageSrc="/images/experience/skk j6.png"
+              altText="SK Jenjang 7"
+              captionText="SK Jenjang 7"
+              containerHeight="300px"
+              containerWidth="300px"
+              imageHeight="300px"
+              imageWidth="300px"
+              rotateAmplitude={12}
+              scaleOnHover={1.2}
+              showMobileWarning={false}
+              showTooltip={true}
+              displayOverlayContent={true}
+              overlayContent={
+                <p className="text-white translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-sm px-3 py-1 shadow-sm">
+                  SK Ahli Muda K3 Konstruksi Freshgraduate
+                </p>
+              }
+            />
+          </a>
+
+          {/* Card 3: Praktik Kerja Lapangan (PKL) */}
           <a
             href="/images/experience/1.jpg"
             target="_blank"
@@ -428,48 +456,46 @@ export default function HomeMobile() {
               imageSrc="/images/experience/1.jpg"
               altText="PKL PT.RAKA UTAMA"
               captionText="PKL PT.RAKA UTAMA"
-              containerHeight="250px" // Ukuran lebih kecil di mobile
-              containerWidth="250px"
-              imageHeight="250px"
-              imageWidth="250px"
-              rotateAmplitude={8} // Rotasi lebih kecil
-              scaleOnHover={1.1}
+              containerHeight="300px"
+              containerWidth="300px"
+              imageHeight="300px"
+              imageWidth="300px"
+              rotateAmplitude={12}
+              scaleOnHover={1.2}
               showMobileWarning={false}
-              showTooltip={false}
+              showTooltip={true}
               displayOverlayContent={true}
               overlayContent={
-                <p className="text-white translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-xs shadow-sm">
-                  Praktik Kerja Lapangan
+                <p className="text-white translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-sm px-3 py-1 shadow-sm">
+                  Praktik Kerja Lapangan (PKL)
                 </p>
               }
             />
           </a>
         </div>
-        {/* Skill Loop */}
-        <div className="mt-10">
+        <div>
           <CurvedLoop
             marqueeText="Skill"
-            speed={0.8} // Kecepatan lebih lambat di mobile
-            curveAmount={150} // Kurva lebih landai
+            speed={1}
+            curveAmount={300}
             interactive={false}
           />
         </div>
-        {/* Logo Loop */}
         <div
           style={{ height: "150px", position: "relative", overflow: "hidden" }}
         >
           <LogoLoop
             logos={imageLogos}
-            speed={80} // Kecepatan lebih lambat di mobile
+            speed={120}
             direction="left"
-            logoHeight={32} // Logo lebih kecil
-            gap={20} // Jarak lebih rapat
+            logoHeight={48}
+            gap={40}
             pauseOnHover
             scaleOnHover
             fadeOut
             fadeOutColor="#000"
             ariaLabel="Technology partners"
-            className="child-img:h-8 child-img:w-auto child-img:object-contain" // Ukuran gambar logo
+            className="child-img:h-12 child-img:w-auto child-img:object-contain"
           />
         </div>
       </section>

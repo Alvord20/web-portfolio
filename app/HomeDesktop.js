@@ -171,7 +171,7 @@ export default function HomeDesktop() {
                 />
                 <div className="flex items-center">
                   <a
-                    href="https://drive.google.com/file/d/1JfoqLdlVcYsmRoi9SuXy44lVuUbwweVL/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1pGq3NPkOoyRTLe_8peF4g3OIS01-rygQ/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -259,7 +259,7 @@ export default function HomeDesktop() {
               onClick={() =>
                 window.open(
                   "https://drive.google.com/file/d/1hee5NeOd2A_KRUzDASlCmE6DNSURy74g/view?usp=sharing",
-                  "_blank"
+                  "_blank",
                 )
               }
               className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800"
@@ -329,11 +329,11 @@ export default function HomeDesktop() {
                 <CardItem
                   translateZ={20}
                   as="a"
-                  href="https://www.instagram.com/vito_qq/"
+                  href="https://www.instagram.com/alvord_ehe/"
                   target="__blank"
                   className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                 >
-                  @Vito_qq
+                  @alvord_ehe
                 </CardItem>
                 <CardItem
                   translateZ={20}
@@ -342,7 +342,7 @@ export default function HomeDesktop() {
                   onClick={() =>
                     window.open(
                       "https://drive.google.com/file/d/1gJNp_e4c9RHgp9H3j6ktWpgNQ8OrVk6v/view?usp=sharing",
-                      "_blank"
+                      "_blank",
                     )
                   }
                   className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
@@ -387,11 +387,11 @@ export default function HomeDesktop() {
                 <CardItem
                   translateZ={20}
                   as="a"
-                  href="https://www.instagram.com/vito_qq/"
+                  href="https://www.instagram.com/alvord_ehe/"
                   target="_blank"
                   className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                 >
-                  @Vito_qq
+                  @alvord_ehe
                 </CardItem>
                 <CardItem
                   translateZ={20}
@@ -421,8 +421,8 @@ export default function HomeDesktop() {
           </ScrollFloat>
         </div>
 
-        {/* Certificate Cards */}
-        <div className="flex items-center justify-center gap-8">
+        <div className="flex items-center justify-center gap-8 flex-wrap">
+          {/* Card 1: SK Manajer Lapangan (Jenjang 6) */}
           <a
             href="https://drive.google.com/file/d/1LJyuDNOGXQrBceNzbN3k-r1M6VBC304n/view?usp=sharing"
             target="_blank"
@@ -442,12 +442,41 @@ export default function HomeDesktop() {
               showTooltip={true}
               displayOverlayContent={true}
               overlayContent={
-                <p className="text-white translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-sm shadow-sm">
+                <p className="text-white translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-sm px-3 py-1 shadow-sm">
                   SK Manajer Lapangan Pelaksanaan Pekerjaan Gedung
                 </p>
               }
             />
           </a>
+
+          {/* Card 2: SK Ahli Muda K3 Konstruksi (Jenjang 7) */}
+          <a
+            href="https://drive.google.com/file/d/17C5nDfsZcz0VLWbkm85QdliiNGl87-YM/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TiltedCard
+              imageSrc="/images/experience/skk j6.png"
+              altText="SK Jenjang 7"
+              captionText="SK Jenjang 7"
+              containerHeight="300px"
+              containerWidth="300px"
+              imageHeight="300px"
+              imageWidth="300px"
+              rotateAmplitude={12}
+              scaleOnHover={1.2}
+              showMobileWarning={false}
+              showTooltip={true}
+              displayOverlayContent={true}
+              overlayContent={
+                <p className="text-white translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-sm px-3 py-1 shadow-sm">
+                  SK Ahli Muda K3 Konstruksi Freshgraduate
+                </p>
+              }
+            />
+          </a>
+
+          {/* Card 3: Praktik Kerja Lapangan (PKL) */}
           <a
             href="/images/experience/1.jpg"
             target="_blank"
@@ -467,7 +496,7 @@ export default function HomeDesktop() {
               showTooltip={true}
               displayOverlayContent={true}
               overlayContent={
-                <p className="text-white translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-sm shadow-sm">
+                <p className="text-white translate-y-1/2 tilted-card-demo-text rounded-full bg-[rgba(80,80,80,0.6)] backdrop-blur-md text-sm px-3 py-1 shadow-sm">
                   Praktik Kerja Lapangan (PKL)
                 </p>
               }
@@ -475,7 +504,6 @@ export default function HomeDesktop() {
           </a>
         </div>
 
-        {/* Skill Loop */}
         <div>
           <CurvedLoop
             marqueeText="Skill"
@@ -484,8 +512,6 @@ export default function HomeDesktop() {
             interactive={false}
           />
         </div>
-
-        {/* Logo Loop */}
         <div
           style={{ height: "200px", position: "relative", overflow: "hidden" }}
         >

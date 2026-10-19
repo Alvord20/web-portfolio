@@ -18,7 +18,7 @@ export default function DockWrapper() {
       icon: <AiFillInstagram size={18} color="#black" />,
       label: "Instagram",
       onClick: () =>
-        window.open("https://www.instagram.com/vito_qq/", "_blank"),
+        window.open("https://www.instagram.com/alvord_ehe/", "_blank"),
     },
     {
       icon: <SiGmail size={18} color="black" />,
@@ -26,7 +26,7 @@ export default function DockWrapper() {
       onClick: () =>
         window.open(
           "https://mail.google.com/mail/?view=cm&fs=1&to=20.ahmadvito@gmail.com&su=Halo%20Vito&body=Halo,%20saya%20ingin%20menghubungi%20Anda!",
-          "_blank"
+          "_blank",
         ),
     },
     {
