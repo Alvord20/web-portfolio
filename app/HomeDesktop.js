@@ -171,7 +171,7 @@ export default function HomeDesktop() {
                 />
                 <div className="flex items-center">
                   <a
-                    href="https://drive.google.com/file/d/1pGq3NPkOoyRTLe_8peF4g3OIS01-rygQ/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1XgLukahW7LhL6-g4z5zY2Q4WktYw2o9t/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
